@@ -5,15 +5,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 // Componentes
-import PrimeiroComp from './components/basicos/Primeiro';
+import PrimeiroComponente from './components/basicos/PrimeiroComponente';
+import ComponenteComParametro from './components/basicos/ComponenteComParametro';
+import Fragmento from './components/basicos/Fragmento';
 
 // Primeiro parametro: o que eu quero renderizar
 // Segundo paramentro: elemento à inserir conteudo
 ReactDOM.render(
-    <div>
-        <PrimeiroComp></PrimeiroComp>
-        <PrimeiroComp></PrimeiroComp>
-        <PrimeiroComp></PrimeiroComp>
+    <div id="root">
+        <PrimeiroComponente />
+        <ComponenteComParametro
+            titulo="Segundo Componente"
+            saudacao="Boa noite"
+            nome="Wesley"
+        />
+        <Fragmento />
     </div>,
     document.getElementById('root')
 );

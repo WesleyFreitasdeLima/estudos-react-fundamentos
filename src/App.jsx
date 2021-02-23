@@ -14,6 +14,9 @@ import Familia from './components/basicos/Familia';
 import FamiliaMembro from './components/basicos/FamiliaMembro';
 import ListaAlunos from './components/repeticao/ListaAlunos';
 import TabelaProdutos from './components/repeticao/TabelaProdutos';
+import ParOuImpar from './components/condicional/ParOuImpar';
+import ComDiretaPai from './components/comunicacao/ComDiretaPai';
+import ComIndiretaPai from './components/comunicacao/ComIndiretaPai';
 
 export default () => {
     return (
@@ -57,6 +60,18 @@ export default () => {
 
                 <Card titulo="#07 - Desafio - Repetição" color="#7bc043">
                     <TabelaProdutos />
+                </Card>
+
+                <Card titulo="#08 - Renderização Condicional">
+                    <ParOuImpar numero={21} />
+                </Card>
+
+                <Card titulo="#09 - Comunicação Direta">
+                    <ComDiretaPai />
+                </Card>
+
+                <Card titulo="#10 - Comunicação Indireta">
+                    <ComIndiretaPai />
                 </Card>
             </div>
         </div>

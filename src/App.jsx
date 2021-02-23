@@ -12,8 +12,10 @@ import Fragmento from './components/basicos/Fragmento';
 import Aleatorio from './components/basicos/Aleatorio';
 import Familia from './components/basicos/Familia';
 import FamiliaMembro from './components/basicos/FamiliaMembro';
+import ListaAlunos from './components/repeticao/ListaAlunos';
+import TabelaProdutos from './components/repeticao/TabelaProdutos';
 
-export default props => {
+export default () => {
     return (
         <div className="App">
             <h1>Fundamentos React</h1>
@@ -39,15 +41,22 @@ export default props => {
 
                 <Card titulo="#04 - Desafio - Numero aleatorio" color="#7bc043">
                     <Aleatorio min={1} max={10} />
-                    <Aleatorio min={1} max={100} />
                 </Card>
 
                 <Card titulo="#05 - Componente com filho">
                     <Familia sobrenome="Lima">
                         <FamiliaMembro nome="Wesley" />
                         <FamiliaMembro nome="Pedro" />
-                        <FamiliaMembro nome="Alessandra"/>
+                        <FamiliaMembro nome="Alessandra" />
                     </Familia>
+                </Card>
+
+                <Card titulo="#06 - Repetição">
+                    <ListaAlunos />
+                </Card>
+
+                <Card titulo="#07 - Desafio - Repetição" color="#7bc043">
+                    <TabelaProdutos />
                 </Card>
             </div>
         </div>

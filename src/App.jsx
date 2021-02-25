@@ -17,6 +17,8 @@ import TabelaProdutos from './components/repeticao/TabelaProdutos';
 import ParOuImpar from './components/condicional/ParOuImpar';
 import ComDiretaPai from './components/comunicacao/ComDiretaPai';
 import ComIndiretaPai from './components/comunicacao/ComIndiretaPai';
+import Input from './components/formulario/Input';
+import Contador from './components/contador/Contador';
 
 export default () => {
     return (
@@ -25,6 +27,7 @@ export default () => {
             <p>
                 Execícios executados durante o curso de <a href="https://www.udemy.com/course/react-redux-pt/">React + Redux</a>
             </p>
+
             <div className="Cards">
                 <Card titulo="#01 - Primeiro Componente" >
                     <PrimeiroComponente />
@@ -72,6 +75,14 @@ export default () => {
 
                 <Card titulo="#10 - Comunicação Indireta">
                     <ComIndiretaPai />
+                </Card>
+
+                <Card titulo="#11 - Componente Controlado (Input)">
+                    <Input />
+                </Card>
+
+                <Card titulo="#12 - Contador">
+                    <Contador numeroInicial={10} />
                 </Card>
             </div>
         </div>

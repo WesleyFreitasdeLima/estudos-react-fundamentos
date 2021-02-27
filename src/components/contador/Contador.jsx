@@ -1,5 +1,9 @@
 import React from 'react';
 
+import Display from './Display';
+import Botoes from './Botoes';
+import PassoForm from './PassoForm';
+
 class Contador extends React.Component {
     constructor(props) {
         super(props);
@@ -11,35 +15,42 @@ class Contador extends React.Component {
         };
     }
 
-    add = () => {
+    setInc = () => {
         this.setState({
             numero: this.state.numero + this.state.passo
         });
     }
 
-    rmv = () => {
+    setDec = () => {
         this.setState({
             numero: this.state.numero - this.state.passo
         });
     }
 
-    setPasso = (evento) => {
+    setPasso = (novoPasso) => {
         this.setState({
-            passo: parseInt(evento.target.value)
+            passo: parseInt(novoPasso)
         });
     }
 
     render() {
         return (
             <div>
-                <p>Exemplo de componente em classe</p>
                 <h2>Contador</h2>
-                <p>Valor Inicial: {this.state.numeroInicial}</p>
-                <p>Valor Atual: {this.state.numero}</p>
+                <Display
+                    numeroInicial={this.state.numeroInicial}
+                    numero={this.state.numero}
+                />
+
                 <p>
-                    <input type="number" value={this.state.passo} onChange={this.setPasso} />
-                    <button onClick={this.add}>+</button>
-                    <button onClick={this.rmv}>-</button>
+                    <PassoForm
+                        passo={this.state.passo}
+                        setPasso={this.setPasso}
+                    />
+                    <Botoes
+                        setInc={this.setInc}
+                        setDec={this.setDec}
+                    />
                 </p>
             </div>
         );

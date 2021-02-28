@@ -19,6 +19,7 @@ import ComDiretaPai from './components/comunicacao/ComDiretaPai';
 import ComIndiretaPai from './components/comunicacao/ComIndiretaPai';
 import Input from './components/formulario/Input';
 import Contador from './components/contador/Contador';
+import MegaSena from './components/megaSena/MegaSena';
 
 export default () => {
     return (
@@ -83,6 +84,10 @@ export default () => {
 
                 <Card titulo="#12 - Contador">
                     <Contador numeroInicial={10} />
+                </Card>
+
+                <Card titulo="#13 - Desafio - MegaSena" color="#7bc043">
+                    <MegaSena valorInicial={6} numMin={1} numMax={60} />
                 </Card>
             </div>
         </div>
